@@ -1,17 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# my-next-app
+
+This is a Next.js client for your AI chat application.
+
+## Color System
+
+This project uses a comprehensive CSS variable-based color system for consistent theming and easy maintenance.
+
+### Quick Start
+
+```css
+/* Using CSS variables */
+.my-component {
+  background-color: var(--primary-500);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+}
+```
+
+```tsx
+// Using TypeScript constants
+import { COLORS } from "../types/colors";
+
+const styles = {
+  button: {
+    backgroundColor: COLORS.BTN_PRIMARY,
+    color: COLORS.TEXT_SECONDARY,
+  },
+};
+```
+
+### Documentation
+
+- 📖 [Color System Guide](COLORS.md) - Complete color variable reference
+- 🔄 [Migration Guide](MIGRATION_GUIDE.md) - How to migrate from hardcoded colors
+- 🎨 [Color Example Component](src/components/ColorExample.tsx) - Usage examples
+
+### Features
+
+- **13 color categories** with semantic naming
+- **Dark mode support** with automatic color adjustments
+- **TypeScript support** with full type safety
+- **Utility functions** for dynamic color manipulation
+- **Accessibility tools** for contrast ratio checking
+
+## Recommended Folder Structure
+
+```
+src/
+  app/
+    start/           # Chat feature (pages, components, styles)
+    home/            # Home page feature
+    login/           # Login feature
+    layout.tsx       # App layout
+    page.tsx         # App entry page
+    globals.css      # Global styles (includes color variables)
+    page.module.css  # Global page styles
+  components/        # Shared UI components (e.g., Button, Modal)
+  utils/             # Shared utility functions (e.g., API helpers)
+  hooks/             # Custom React hooks
+  types/             # Shared TypeScript types (includes colors.ts)
+```
+
+- Place feature-specific components and styles in their respective folders under `app/` (e.g., `start/`, `home/`, `login/`).
+- Place reusable UI components in `src/components/`.
+- Place shared logic in `src/utils/` and custom hooks in `src/hooks/`.
+- Place shared types in `src/types/`.
+
+This structure helps keep your codebase organized and maintainable as your app grows.
 
 ## Getting Started
 
-First, run the development server:
+This project uses **Yarn** as the package manager. Please make sure you have Yarn installed.
+
+First, install dependencies:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Then run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

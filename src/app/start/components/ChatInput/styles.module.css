@@ -1,0 +1,56 @@
+.inputArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(180, 185, 246, 0.1);
+  border-radius: 16px;
+  padding: 18px 12px 8px 12px;
+  margin-top: 18px;
+  box-shadow: 0 2px 8px var(--shadow-primary);
+  transition: all 0.3s;
+}
+
+.inputArea:hover {
+  background: rgba(180, 185, 246, 0.16);
+  box-shadow: 0 4px 16px var(--shadow-secondary);
+}
+
+.input {
+  flex: 1;
+  font-size: 1.08rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-primary);
+  padding: 10px 16px;
+  background: var(--white);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: var(--border-secondary);
+  box-shadow: 0 0 0 2px var(--shadow-accent);
+}
+
+.sendBtn {
+  border-radius: 10px;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary) 0%,
+    var(--btn-secondary) 100%
+  );
+  border: none;
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px var(--shadow-secondary);
+  transition: all 0.3s;
+}
+
+.sendBtn:hover {
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary-hover) 0%,
+    var(--btn-secondary-hover) 100%
+  );
+  color: var(--text-tertiary);
+  box-shadow: 0 6px 24px var(--shadow-tertiary);
+  transform: translateY(-2px) scale(1.04);
+}

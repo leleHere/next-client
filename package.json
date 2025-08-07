@@ -2,24 +2,36 @@
   "name": "my-next-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": "please-use-yarn",
+    "yarn": ">=1.22.0"
+  },
   "scripts": {
+    "preinstall": "node scripts/check-package-manager.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.4.1"
+    "@ant-design/icons": "^5.5.0",
+    "antd": "^5.26.5",
+    "jose": "^6.0.12",
+    "next": "15.4.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-loading-skeleton": "^3.5.0",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "eslint": "^9",
     "eslint-config-next": "15.4.1",
-    "@eslint/eslintrc": "^3"
+    "husky": "^9.1.7",
+    "typescript": "^5"
   }
 }

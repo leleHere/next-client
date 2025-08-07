@@ -1,0 +1,117 @@
+.sidebar {
+  width: 360px;
+  background: linear-gradient(
+    135deg,
+    var(--chat-bg-tertiary) 0%,
+    var(--chat-bg-quaternary) 100%
+  );
+  border-radius: 24px 0 0 24px;
+  box-shadow: 0 4px 32px var(--shadow-primary);
+  padding: 32px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 80vh;
+  border-right: 1.5px solid var(--border-primary);
+}
+
+.sidebarHeader {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-left: 32px;
+  letter-spacing: 0.5px;
+}
+
+.newChatBtnWrapper {
+  padding: 0 32px 18px 32px;
+}
+
+.newChatBtn {
+  width: 100%;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary) 0%,
+    var(--btn-secondary) 100%
+  );
+  border: none;
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px var(--shadow-secondary);
+  transition: all 0.3s;
+}
+
+.newChatBtn:hover {
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary-hover) 0%,
+    var(--btn-secondary-hover) 100%
+  );
+  color: var(--text-tertiary);
+  box-shadow: 0 6px 24px var(--shadow-tertiary);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.historyList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px;
+}
+
+.historyItem,
+.activeHistory {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px !important;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s, box-shadow 0.2s;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.activeHistory {
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary) 0%,
+    var(--btn-secondary) 100%
+  );
+  color: var(--text-tertiary);
+  box-shadow: 0 2px 12px var(--shadow-quaternary);
+}
+
+.historyIcon {
+  font-size: 1.2rem;
+}
+
+.historyText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.historyTitle {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.historyPreview {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.historyTime {
+  font-size: 0.85rem;
+  color: var(--text-accent);
+  margin-left: 8px;
+}

@@ -1,0 +1,155 @@
+.messagesArea {
+  flex: 1;
+  padding: 56px 0 32px 0;
+  background: linear-gradient(
+    120deg,
+    var(--chat-bg-tertiary) 0%,
+    var(--chat-bg-quaternary) 100%
+  );
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 2px 12px var(--shadow-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 400px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.messagesInner {
+  width: 100%;
+  /* max-width: 600px; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 28px;
+  animation: slideInUp 0.5s ease;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai {
+  flex-direction: row;
+}
+
+.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  font-size: 2rem;
+  color: var(--text-accent);
+  margin: 0 18px;
+}
+
+.bubble {
+  background: var(--white);
+  border-radius: 28px;
+  padding: 20px 32px;
+  box-shadow: 0 4px 24px var(--shadow-primary);
+  font-size: 1.22rem;
+  min-width: 100px;
+  max-width: 70vw;
+  margin: 0 12px;
+  color: var(--text-primary);
+  line-height: 1.8;
+  transition: background 0.2s;
+}
+
+.ai .bubble {
+  background: linear-gradient(
+    90deg,
+    var(--chat-bg-primary) 0%,
+    var(--chat-bg-tertiary) 100%
+  );
+  color: var(--text-secondary);
+}
+
+.user .bubble {
+  background: linear-gradient(
+    90deg,
+    var(--btn-primary) 0%,
+    var(--btn-secondary) 100%
+  );
+  color: var(--text-tertiary);
+}
+
+.bubbleTimestamp {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--text-accent);
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.bubbleTail {
+  position: absolute;
+  bottom: 0;
+  left: -14px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-right: 14px solid var(--white);
+  border-bottom: 0 solid transparent;
+}
+
+.user .bubbleTail {
+  left: auto;
+  right: -14px;
+  border-right: 0;
+  border-left: 14px solid var(--btn-primary);
+}
+
+.loadingDots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-accent);
+  animation: dotPulse 1.4s ease-in-out infinite both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes dotPulse {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
