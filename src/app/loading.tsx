@@ -10,6 +10,7 @@ export default function Loading() {
         alignItems: "center",
         justifyContent: "center",
         height: "100vh",
+        width: "100vw",
         background:
           "linear-gradient(135deg, var(--chat-bg-primary) 0%, var(--chat-bg-secondary) 100%)",
       }}

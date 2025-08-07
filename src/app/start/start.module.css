@@ -1,8 +1,8 @@
 .fullPage {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   width: 100vw;
   display: flex;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -55,7 +55,7 @@
 
 .mainArea {
   flex: 1;
-  height: 100vh;
+  height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   justify-content: center;

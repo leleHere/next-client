@@ -1,17 +1,13 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import { Typography, Flex, Avatar } from "antd";
-import { UserOutlined } from "@ant-design/icons";
 import styles from "./start.module.css";
 import ChatSidebar from "./components/ChatSidebar";
 import ChatMessages from "./components/ChatMessages";
 import ChatInput from "./components/ChatInput";
 import { useChatStore, Message } from "@/store/chatStore";
 import { fetchHistory, fetchChat, createChat, sendMessage } from "@/utils/api";
-import ColorExample from "@/app/color/ColorExample";
 import { useAuth } from "@/hooks/useAuth";
-import { LogoutButton } from "@/components/LogoutButton";
 
 const { Title } = Typography;
 
@@ -188,33 +184,6 @@ export default function StartPage() {
 
   return (
     <div className={styles.fullPage}>
-      {/* 用户信息头部 */}
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          zIndex: 1000,
-          padding: "16px",
-          background: "rgba(255, 255, 255, 0.9)",
-          backdropFilter: "blur(10px)",
-          borderBottom: "1px solid #f0f0f0",
-          borderLeft: "1px solid #f0f0f0",
-          borderBottomLeftRadius: "8px",
-        }}
-      >
-        <Flex align="center" gap={12}>
-          <Avatar icon={<UserOutlined />} />
-          <div>
-            <div style={{ fontWeight: "bold" }}>{user?.username || "用户"}</div>
-            <div style={{ fontSize: "12px", color: "#666" }}>
-              {user?.role || "user"}
-            </div>
-          </div>
-          <LogoutButton size="small" />
-        </Flex>
-      </div>
-
       <ChatSidebar
         history={history}
         currentId={currentId || 0}

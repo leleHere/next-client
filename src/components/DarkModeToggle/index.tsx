@@ -51,7 +51,6 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
 
   const buttonStyle: React.CSSProperties = {
     position,
-    top: position === "fixed" ? "20px" : "auto",
     right: position === "fixed" ? "20px" : "auto",
     zIndex: 1000,
     width: size === "small" ? "32px" : size === "large" ? "48px" : "40px",
